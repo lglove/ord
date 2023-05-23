@@ -118,9 +118,9 @@ type Result<T> = std::result::Result<T, Error>;
 impl TransactionBuilder {
   const ADDITIONAL_INPUT_VBYTES: usize = 58;
   const ADDITIONAL_OUTPUT_VBYTES: usize = 43;
+  const MAX_POSTAGE: Amount = Amount::from_sat(2 * 555);
   const SCHNORR_SIGNATURE_SIZE: usize = 64;
-  pub(crate) const TARGET_POSTAGE: Amount = Amount::from_sat(10_000);
-  pub(crate) const MAX_POSTAGE: Amount = Amount::from_sat(2 * 10_000);
+  pub(crate) const TARGET_POSTAGE: Amount = Amount::from_sat(555);
 
   pub(crate) fn new(
     outgoing: SatPoint,
