@@ -53,7 +53,7 @@ fn from_file() {
       inscriptions: vec![Inscription {
         body: Some(vec![0, 1, 2, 3]),
         content_type: Some(b"text/plain;charset=utf-8".to_vec()),
-        unrecognized_even_field: false
+        ..Default::default()
       }],
     }
   );
@@ -69,7 +69,7 @@ fn from_stdin() {
       inscriptions: vec![Inscription {
         body: Some(vec![0, 1, 2, 3]),
         content_type: Some(b"text/plain;charset=utf-8".to_vec()),
-        unrecognized_even_field: false
+        ..Default::default()
       }],
     }
   );
